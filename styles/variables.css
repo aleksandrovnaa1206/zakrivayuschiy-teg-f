@@ -18,12 +18,9 @@
     --button-color: #fff;
     --button-text-color: #fff;
 
-    
+
     --container-width: clamp(375px, 50vw, 700px);
     --img-width: clamp(371px, 50vw, 696px);
-    
+
 
 }
-
-
-
