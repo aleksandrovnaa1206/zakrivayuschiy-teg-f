@@ -45,27 +45,30 @@
   color: var(--text-color);
 }
 
-.card {
-  position: relative;
-  inline-size: var(--container-width);
-  margin-inline: auto;
-  background-color: var(--bg-color);
-  border: 2px solid var(--border-color);
-  margin-bottom: 52px;
-}
-
-.content .card:first-child {
+.content {
+  display: grid;
+  justify-self: center;
+  gap: 53px;
   margin-top: 100px;
 }
+
+.card {
+  inline-size: var(--container-width);
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+}
+
 
 .card__title {
   font-family: var(--main-font), Arial, sans-serif;
   font-size: 18px;
   font-variation-settings: "wght"var(--main-title-font-weight);
-  /* border-bottom: 2px solid var(--border-color); */
   padding: 4px 10px;
 }
 
+.card__image-container {
+  position: relative;
+}
 .card__img-label {
   position: absolute;
   z-index: 1;
@@ -76,14 +79,9 @@
   text-transform: uppercase;
   text-shadow: 0 0 1px var(--text-stroke-color);
   opacity: 0.5;
-  right: 25px;
-  top: 56px;
+  right: 26px;
+  top: 27px;
   mix-blend-mode: hard-light;
-}
-
-.card__img-label:first-of-type {
-  right: 25px;
-  top: 78px;
 }
 
 .card__image {
@@ -102,13 +100,14 @@
   font-size: 18px;
   color: var(--text-color);
   font-variation-settings: "wght"var(--main-text-font-weight);
-  padding: 25px 25px 0 26px;
+  padding: 26px 26px 0 25px;
   line-height: 21px;
 }
 
 .button {
   position: relative;
   background-color: var(--button-color);
+  border: transparent;
   outline: 2px solid var(--border-color);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
@@ -144,17 +143,25 @@
 .card__button {
   display: flex;
   justify-content: end;
-  align-items: center;
-  margin-top: 22px;
-  margin-right: 25px;
-  margin-bottom: 20px;
+  gap: 5px;
+  /* margin-top: auto; */
+  padding-right: 25px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  /* margin-right: 25px;
+  margin-bottom: 27px; */
 }
 
 .card__icon-button {
+  display: flex;
+    align-items: center;
+  justify-content: center;
+  block-size: 36px;
   background-color: transparent;
   border: 2px solid transparent;
   cursor: pointer;
   transition: border-color 0.3s ease;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -173,19 +180,12 @@
   inline-size: 130px;
 }
 
-.like-icon {
-  padding-top: 1px;
-  padding-left: 3px;
-}
-
-
-
 .save__button {
   display: grid;
   justify-items: center;
   align-items: center;
   gap: 8px;
-  margin: 50px auto 100px;
+  margin: 3px auto 100px;
   padding: 15px 18px;
 }
 
@@ -203,39 +203,35 @@
   z-index: 1;
 }
 
-/* .card p+p {
-  margin-top: 25px;
-} */
-
-.image-bus {
+.image_filter-grayscale {
   filter: grayscale(1);
 }
 
-.image-paper {
+.image_filter-blur {
   filter: blur(0.2rem);
 }
 
-.image-romaski {
+.image_filter-hue-rotate {
   filter: hue-rotate(-50deg);
 }
 
-.image-book {
+.image_filter-contrast {
   filter: contrast(300%);
 }
 
-.image-handshake {
+.image_filter-invert {
   filter: invert(100%);
 }
 
-.image-road {
+.image_filter-sepia {
   filter: sepia(130%);
 }
 
-.image-meditation {
+.image-filter-saturate {
   filter: saturate(400%);
 }
 
-.image-ladder {
+.image_filter-multiple {
   filter: saturate(0.70) sepia(0.25) contrast(0.95) brightness(1.02) blur(0.2px);
 }
 
