@@ -277,10 +277,6 @@ dialog::backdrop {
   padding: 7px 0px;
 }
 
-.modal__text {
-  text-transform: uppercase;
-}
-
 @supports ((text-stroke: 1px var(--text-stroke-color)) or (-webkit-text-stroke: 1px var(--text-stroke-color))) {
   .card__img-label {
     text-shadow: none;
