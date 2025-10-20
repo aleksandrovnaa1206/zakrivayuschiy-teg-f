@@ -107,14 +107,16 @@
 .button {
   position: relative;
   background-color: var(--button-color);
-  border: transparent;
-  outline: 2px solid var(--border-color);
+  border: 2px solid var(--border-color);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--border-color);
 }
 
@@ -133,12 +135,6 @@
 .button:hover::before {
   transform: scaleX(1);
 }
-
-
-
-/* .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--border-color);
-} */
 
 .card__button {
   display: flex;
